@@ -81,12 +81,35 @@ header .contenedor{
 
 .banner {
     width: 100%;
-    height: 750px;
+    min-height: 750px;
     margin: auto;
     background: linear-gradient(rgba(19, 21, 23, 0.5), rgba(19, 21, 23, 0.5)), url(../img/E1.jpeg);
-    background-position: center;
+    background-position: 40%;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
+}
+/* Media query para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    .banner {
+        height: 50vh; 
+        background-position: center;
+    }
+}
+
+/* Media query para pantallas medianas (tabletas) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .banner {
+        height: 70vh; 
+        background-position: center center; 
+    }
+}
+
+/* Media query para pantallas grandes (escritorios) */
+@media (min-width: 1025px) {
+    .banner {
+        height: 80vh; 
+        background-position: center center; 
+    }
 }
 
 .banner > div{
@@ -134,6 +157,7 @@ header .contenedor{
 .cont a:hover{
     background-color: rgba(0, 0, 0, 0.8);
 }
+
 
 /*Fin banne principal*/
 
